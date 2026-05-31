@@ -22,13 +22,13 @@
 
 ## Palettes
 
-![](hellokitty1.webp)
+![](figure/hellokitty1.webp)
 
 ``` r
 #hkitty_palette("hellokitty1")
 ```
 
-![](hellokitty2.jpg)
+![](figure/hellokitty2.jpg)
 
 ``` r
 #hkitty_palette("hellokitty2")
