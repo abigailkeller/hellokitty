@@ -22,13 +22,17 @@
 
 ## Palettes
 
-![](figure/hellokitty1.webp)
+<img src="figure/hellokitty1.webp" style="width:4in" /> [Image
+Source](https://hellokitty.fandom.com/wiki/Hello_Kitty)
 
 ``` r
 #hkitty_palette("hellokitty1")
 ```
 
-![](figure/hellokitty2.jpg)
+<img src="figure/hellokitty2.jpg" style="width:4in" />
+
+[Image
+Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
 
 ``` r
 #hkitty_palette("hellokitty2")

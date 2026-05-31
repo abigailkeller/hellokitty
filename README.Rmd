@@ -38,13 +38,16 @@ knitr::opts_chunk$set(
 
 ## Palettes
 
-![](figure/hellokitty1.webp)
+![](figure/hellokitty1.webp){width=4in}
+[Image Source](https://hellokitty.fandom.com/wiki/Hello_Kitty)
 
 ```{r, hellokitty1}
 #hkitty_palette("hellokitty1")
 ```
 
-![](figure/hellokitty2.jpg)
+![](figure/hellokitty2.jpg){width=4in}
+
+[Image Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
 
 ```{r, hellokitty2}
 #hkitty_palette("hellokitty2")
