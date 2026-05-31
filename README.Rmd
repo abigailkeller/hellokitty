@@ -1,0 +1,52 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+# Hello Kitty Color Palettes
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "figure/",
+  fig.height = 1
+)
+```
+
+## Installation
+
+``` r
+
+```
+
+**Or the development version**
+
+``` r
+# devtools::install_github("abigailkeller/hellokitty")
+```
+
+## Usage
+
+```{r, palettes_dummy}
+#library("hellokitty")
+
+# See all palettes
+#names(hkitty_palettes)
+```
+
+## Palettes
+
+![](hellokitty1.webp)
+
+```{r, hellokitty1}
+#hkitty_palette("hellokitty1")
+```
+
+![](hellokitty2.jpg)
+
+```{r, hellokitty2}
+#hkitty_palette("hellokitty2")
+```
+
