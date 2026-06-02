@@ -6,6 +6,13 @@ output:
 
 # Hello Kitty Color Palettes
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/abigailkeller/hellokitty/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/abigailkeller/hellokitty/actions/workflows/R-CMD-check.yaml)
+
+<!-- badges: end -->
+
+
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -39,6 +46,7 @@ knitr::opts_chunk$set(
 ## Palettes
 
 ![](figure/hellokitty1.webp){height=2in}
+
 [Image Source](https://hellokitty.fandom.com/wiki/Hello_Kitty)
 
 ```{r, hellokitty1}
@@ -52,4 +60,9 @@ knitr::opts_chunk$set(
 ```{r, hellokitty2}
 #hkitty_palette("hellokitty2")
 ```
+
+
+### Notes
+
+Code adapted from the [wesanderson](https://github.com/karthik/wesanderson/tree/master) R package.
 
