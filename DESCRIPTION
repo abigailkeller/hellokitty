@@ -5,6 +5,8 @@ Version: 0.1
 Authors@R: 
     person("Abigail", "Keller", role = c("aut", "cre"), email = "agkeller@berkeley.edu")
 License: MIT + file LICENSE
+Depends:
+    R (>= 3.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
