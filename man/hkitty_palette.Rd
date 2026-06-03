@@ -30,6 +30,6 @@ hkitty_palette("hellokitty1", 3)
 # If you need more colours than normally found in a palette, you
 # can use a continuous palette to interpolate between existing
 # colours
-pal <- hkitty_palette(21, name = "hellokitty2", type = "continuous")
+pal <- hkitty_palette(name = "hellokitty2", n = 21, type = "continuous")
 }
 \keyword{colors}

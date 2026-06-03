@@ -37,30 +37,71 @@ knitr::opts_chunk$set(
 ## Usage
 
 ```{r, palettes_dummy}
-#library("hellokitty")
+library(hellokitty)
+library(tidyverse)
 
 # See all palettes
-#names(hkitty_palettes)
+names(hkitty_palettes)
 ```
 
 ## Palettes
+
+### Hello Kitty Palette 1
 
 ![](figure/hellokitty1.webp){height=2in}
 
 [Image Source](https://hellokitty.fandom.com/wiki/Hello_Kitty)
 
 ```{r, hellokitty1}
-#hkitty_palette("hellokitty1")
+hkitty_palette("hellokitty1")
 ```
 
 ![](figure/hellokitty2.jpg){height=2in}
+### Hello Kitty Palette 2
 
 [Image Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
 
 ```{r, hellokitty2}
-#hkitty_palette("hellokitty2")
+hkitty_palette("hellokitty2")
 ```
 
+
+## Example usage
+
+```{r}
+# get CRB salmon
+salmon <- c("Chinook", "Chum", "Coho", "Pink", "Sockeye")
+CRB_salmon <- CRB_long[CRB_long$Species %in% salmon, ]
+
+n_colors <- length(salmon)
+pal2 <- hkitty_palette(name = "hellokitty2", n = n_colors, type = "discrete")
+
+ggplot(data = CRB_salmon) +
+  geom_line(aes(x = year_label, y = total_value, color = Species)) +
+  scale_color_manual(values = pal2) +
+  labs(x = "Year", y = "Count", color = "Species") +
+  ggtitle(paste0("Annual counts of salmon returns to Bonneville\nDam in the ", 
+                 "Columbia River Basin")) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, size = 14),
+        legend.title = element_text(hjust = 0.5)
+  )
+```
+
+```{r}
+pal1 <- hkitty_palette(name = "hellokitty1", type = "continuous")
+
+ggplot(data = CRB_wide[CRB_wide$Lamprey > 0, ]) +
+  geom_point(aes(x = log(Chinook), y = log(Shad), color = log(Lamprey))) +
+  scale_color_gradientn(colors = pal1) +
+  labs(x = "Chinook (log count)", y = "Shad (log count)", 
+       color = "Lamprey\n (log count)") +
+  ggtitle("Fish co-occurrence in the Columbia River Basin") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, size = 14),
+        legend.title = element_text(hjust = 0.5)
+  )
+```
 
 ### Notes
 
