@@ -31,20 +31,21 @@ knitr::opts_chunk$set(
 **Or the development version**
 
 ``` r
-# devtools::install_github("abigailkeller/hellokitty")
+devtools::install_github("abigailkeller/hellokitty")
 ```
 
 ## Usage
 
-```{r, palettes_dummy}
+```{r, palettes_dummy, message = FALSE, warning = FALSE}
 library(hellokitty)
-library(tidyverse)
 
 # See all palettes
 names(hkitty_palettes)
 ```
 
 ## Palettes
+
+`hellokitty` contains two color palettes:
 
 ### Hello Kitty Palette 1
 
@@ -57,6 +58,7 @@ hkitty_palette("hellokitty1")
 ```
 
 ![](figure/hellokitty2.jpg){height=2in}
+
 ### Hello Kitty Palette 2
 
 [Image Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
@@ -68,17 +70,33 @@ hkitty_palette("hellokitty2")
 
 ## Example usage
 
+The `hellokitty` package can be used to create both discrete and continuous color scales.
+
+### Example 1: Discrete color scale
+
+First we will get data showing the number of Pacific salmon returning to the Columbia River Basin based on visual observations at Bonneville Dam.
+
 ```{r}
+library(tidyverse)
+
 # get CRB salmon
 salmon <- c("Chinook", "Chum", "Coho", "Pink", "Sockeye")
 CRB_salmon <- CRB_long[CRB_long$Species %in% salmon, ]
+```
 
+We will then create a discrete color palette based on the different salmon species.
+
+```{r}
 n_colors <- length(salmon)
-pal2 <- hkitty_palette(name = "hellokitty2", n = n_colors, type = "discrete")
+pal1 <- hkitty_palette(name = "hellokitty2", n = n_colors, type = "discrete")
+```
 
+And we will plot the counts of salmon returns to Bonneville Dam over time:
+
+```{r, fig.width=8, fig.height=5}
 ggplot(data = CRB_salmon) +
   geom_line(aes(x = year_label, y = total_value, color = Species)) +
-  scale_color_manual(values = pal2) +
+  scale_color_manual(values = pal1) +
   labs(x = "Year", y = "Count", color = "Species") +
   ggtitle(paste0("Annual counts of salmon returns to Bonneville\nDam in the ", 
                  "Columbia River Basin")) +
@@ -88,12 +106,21 @@ ggplot(data = CRB_salmon) +
   )
 ```
 
-```{r}
-pal1 <- hkitty_palette(name = "hellokitty1", type = "continuous")
 
+### Example 2: Continuous color scale
+
+Now we will get a continuous color scale:
+
+```{r}
+pal2 <- hkitty_palette(name = "hellokitty1", type = "continuous")
+```
+
+And use it to plot the relationship between the count of Chinook salmon, shad, and lamprey returning to the Columbia River:
+
+```{r, fig.width=8, fig.height=5}
 ggplot(data = CRB_wide[CRB_wide$Lamprey > 0, ]) +
   geom_point(aes(x = log(Chinook), y = log(Shad), color = log(Lamprey))) +
-  scale_color_gradientn(colors = pal1) +
+  scale_color_gradientn(colors = pal2) +
   labs(x = "Chinook (log count)", y = "Shad (log count)", 
        color = "Lamprey\n (log count)") +
   ggtitle("Fish co-occurrence in the Columbia River Basin") +
