@@ -53,7 +53,7 @@ names(hkitty_palettes)
 
 [Image Source](https://hellokitty.fandom.com/wiki/Hello_Kitty)
 
-```{r, hellokitty1}
+```{r, hellokitty1, fig.height=1}
 hkitty_palette("hellokitty1")
 ```
 
