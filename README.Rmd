@@ -92,7 +92,7 @@ pal1 <- hkitty_palette(name = "hellokitty2", n = n_colors, type = "discrete")
 
 And we will plot the counts of salmon returns to Bonneville Dam over time:
 
-```{r, fig.width=6, fig.height=3, message = FALSE, warning = FALSE, out.width="50%"}
+```{r, fig.width=6, fig.height=3, message = FALSE, warning = FALSE, out.width="75%"}
 ggplot(data = CRB_salmon) +
   geom_line(aes(x = year_label, y = total_value, color = Species)) +
   scale_color_manual(values = pal1) +
@@ -116,7 +116,7 @@ pal2 <- hkitty_palette(name = "hellokitty1", type = "continuous")
 
 And use it to plot the relationship between the count of Chinook salmon, shad, and lamprey returning to the Columbia River:
 
-```{r, fig.width=6, fig.height=3, message = FALSE, warning = FALSE, out.width="50%"}
+```{r, fig.width=6, fig.height=3, message = FALSE, warning = FALSE, out.width="75%"}
 ggplot(data = CRB_wide[CRB_wide$Lamprey > 0, ]) +
   geom_point(aes(x = log(Chinook), y = log(Shad), color = log(Lamprey))) +
   scale_color_gradientn(colors = pal2) +
