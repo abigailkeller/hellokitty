@@ -43,11 +43,9 @@ hkitty_palette("hellokitty1")
 
 ![](figure/hellokitty1-1.png)
 
-<img src="figure/hellokitty2.jpg" style="height:2in" />
-
 ### Hello Kitty Palette 2
 
-[Image
+<img src="figure/hellokitty2.jpg" style="height:2in" /> [Image
 Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
 
 ``` r
@@ -68,16 +66,6 @@ the Columbia River Basin based on visual observations at Bonneville Dam.
 
 ``` r
 library(tidyverse)
-#> ── [1mAttaching core tidyverse packages[22m ──────────────────────── tidyverse 2.0.0 ──
-#> [32m✔[39m [34mdplyr    [39m 1.2.1     [32m✔[39m [34mreadr    [39m 2.2.0
-#> [32m✔[39m [34mforcats  [39m 1.0.1     [32m✔[39m [34mstringr  [39m 1.6.0
-#> [32m✔[39m [34mggplot2  [39m 4.0.3     [32m✔[39m [34mtibble   [39m 3.3.1
-#> [32m✔[39m [34mlubridate[39m 1.9.5     [32m✔[39m [34mtidyr    [39m 1.3.2
-#> [32m✔[39m [34mpurrr    [39m 1.2.2     
-#> ── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
-#> [31m✖[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-#> [31m✖[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
-#> [36mℹ[39m Use the conflicted package ([3m[34m<http://conflicted.r-lib.org/>[39m[23m) to force all conflicts to become errors
 
 # get CRB salmon
 salmon <- c("Chinook", "Chum", "Coho", "Pink", "Sockeye")
@@ -106,8 +94,6 @@ ggplot(data = CRB_salmon) +
   theme(plot.title = element_text(hjust = 0.5, size = 14),
         legend.title = element_text(hjust = 0.5)
   )
-#> Warning: [1m[22mRemoved 5 rows containing missing values or values outside the scale range
-#> (`geom_line()`).
 ```
 
 ![](figure/unnamed-chunk-4-1.png)
