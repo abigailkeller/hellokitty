@@ -45,7 +45,9 @@ hkitty_palette("hellokitty1")
 
 ### Hello Kitty Palette 2
 
-<img src="figure/hellokitty2.jpg" style="height:2in" /> [Image
+<img src="figure/hellokitty2.jpg" style="height:2in" />
+
+[Image
 Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
 
 ``` r

@@ -17,8 +17,7 @@ output:
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "figure/",
-  fig.height = 1
+  fig.path = "figure/"
 )
 ```
 
@@ -60,6 +59,7 @@ hkitty_palette("hellokitty1")
 ### Hello Kitty Palette 2
 
 ![](figure/hellokitty2.jpg){height=2in}
+
 [Image Source](https://www.parents.com/why-is-hello-kitty-so-popular-11851589)
 
 ```{r, hellokitty2}
