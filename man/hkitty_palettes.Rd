@@ -6,6 +6,9 @@
 \usage{
 hkitty_palettes
 }
+\value{
+No return value, called for side effects (list of color palettes).
+}
 \description{
 Complete list of palettes
 }

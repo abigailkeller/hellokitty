@@ -1,5 +1,6 @@
 #' Complete list of palettes
 #'
+#' @return No return value, called for side effects (list of color palettes).
 #' @export
 hkitty_palettes <- list(
   hellokitty1 = c("#F81B44", "#0E52A6", "#FEDE08", "#000000"),
@@ -10,13 +11,13 @@ hkitty_palettes <- list(
 #'
 #' These are a handful of color palettes from Wes Anderson movies.
 #'
-#' @param n Number of colors desired. If omitted, uses all colours.
+#' @param n Number of colors desired. If omitted, uses all colors.
 #' @param name Name of desired palette. Choices are:
 #'   \code{hellokitty1}, \code{hellokitty2}
 #' @param type Either "continuous" or "discrete". Use continuous if you want
-#'   to automatically interpolate between colours.
+#'   to automatically interpolate between colors.
 #'   @importFrom graphics rgb rect par image text
-#' @return A vector of colours.
+#' @return A vector of colors.
 #' @export
 #' @keywords colors
 #' @examples
@@ -24,9 +25,9 @@ hkitty_palettes <- list(
 #' hkitty_palette("hellokitty2")
 #' hkitty_palette("hellokitty1", 3)
 #'
-#' # If you need more colours than normally found in a palette, you
+#' # If you need more colors than normally found in a palette, you
 #' # can use a continuous palette to interpolate between existing
-#' # colours
+#' # colors
 #' pal <- hkitty_palette(name = "hellokitty2", n = 21, type = "continuous")
 hkitty_palette <- function(name, n, type = c("discrete", "continuous")) {
   
@@ -52,6 +53,14 @@ hkitty_palette <- function(name, n, type = c("discrete", "continuous")) {
   structure(out, class = "palette", name = name)
 }
 
+#' Print a color palette
+#'
+#' Displays a color palette as a colored image with the palette name overlaid.
+#'
+#' @param x a palette object to print
+#' @param ... additional arguments passed to other methods
+#' 
+#' @return No return value, called for side effects (displays a color palette plot).
 #' @export
 #' @importFrom graphics rect par image text
 #' @importFrom grDevices rgb

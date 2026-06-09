@@ -1,6 +1,6 @@
 Package: hellokitty
 Title: A Hello Kitty Color Palette Generator
-Description: Palettes generated mostly from `Hello Kitty` cartoon.
+Description: Palettes generated from Hello Kitty cartoon.
 Version: 0.1
 Authors@R: 
     person("Abigail", "Keller", role = c("aut", "cre"), email = "agkeller@berkeley.edu")

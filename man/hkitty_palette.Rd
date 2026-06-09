@@ -10,14 +10,14 @@ hkitty_palette(name, n, type = c("discrete", "continuous"))
 \item{name}{Name of desired palette. Choices are:
 \code{hellokitty1}, \code{hellokitty2}}
 
-\item{n}{Number of colors desired. If omitted, uses all colours.}
+\item{n}{Number of colors desired. If omitted, uses all colors.}
 
 \item{type}{Either "continuous" or "discrete". Use continuous if you want
-to automatically interpolate between colours.
+to automatically interpolate between colors.
 @importFrom graphics rgb rect par image text}
 }
 \value{
-A vector of colours.
+A vector of colors.
 }
 \description{
 These are a handful of color palettes from Wes Anderson movies.
@@ -27,9 +27,9 @@ hkitty_palette("hellokitty1")
 hkitty_palette("hellokitty2")
 hkitty_palette("hellokitty1", 3)
 
-# If you need more colours than normally found in a palette, you
+# If you need more colors than normally found in a palette, you
 # can use a continuous palette to interpolate between existing
-# colours
+# colors
 pal <- hkitty_palette(name = "hellokitty2", n = 21, type = "continuous")
 }
 \keyword{colors}
