@@ -93,7 +93,7 @@ ggplot(data = CRB_salmon) +
   )
 ```
 
-<img src="figure/unnamed-chunk-6-1.png" alt="" width="75%" />
+<img src="figure/plot1-1.png" alt="" width="75%" />
 
 ### Example 2: Continuous color scale
 
@@ -119,7 +119,7 @@ ggplot(data = CRB_wide[CRB_wide$Lamprey > 0, ]) +
   )
 ```
 
-<img src="figure/unnamed-chunk-8-1.png" alt="" width="75%" />
+<img src="figure/plot2-1.png" alt="" width="75%" />
 
 ### Notes
 
