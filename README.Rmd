@@ -24,26 +24,23 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-``` r
+``` {r, eval = FALSE}
+install.packages("hellokitty")
 
 ```
 
 **Or the development version**
 
-``` r
+``` {r, eval = FALSE}
 devtools::install_github("abigailkeller/hellokitty")
 ```
 
-## Usage
+
+## Palettes
 
 ```{r, palettes_dummy, message = FALSE, warning = FALSE}
 library(hellokitty)
-
-# See all palettes
-names(hkitty_palettes)
 ```
-
-## Palettes
 
 `hellokitty` contains two color palettes:
 
